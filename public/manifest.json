@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "ApplyPilot — Local Job Autofill",
+  "short_name": "ApplyPilot",
+  "version": "0.1.0",
+  "description": "Review and autofill job application forms using profiles stored locally on this device.",
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {"default_popup": "popup.html", "default_title": "ApplyPilot"},
+  "options_page": "index.html",
+  "content_scripts": [{"matches": ["<all_urls>"], "js": ["content.js"], "run_at": "document_idle"}],
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'self'"}
+}
